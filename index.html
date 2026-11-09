@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DHALL STURE - Diamond Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="loader">
+  <img src="potoprofile.jpg" class="loader-photo">
+  <h2>DHALL STURE</h2>
+  <p>PREMIUM DIAMOND STORE</p>
+  <div class="loading-line"><span></span></div>
+</div>
+
+<!-- MUSIK -->
+<audio id="music" src="lagu.mp3" loop autoplay></audio>
+
+<div class="music-control">
+  <button onclick="toggleMusic()" id="musicBtn">♫ MUSIC ON</button>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="profile">
+    <img src="potoprofile.jpg" alt="Logo DHALL STURE">
+    <div>
+      <h2>DHALL STURE</h2>
+      <small>FREE FIRE DIAMOND STORE</small>
+    </div>
+  </div>
+  <span class="status">● ONLINE</span>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="tag">WELCOME TO</p>
+  <h1>DHALL <span>STURE</span></h1>
+  <p>Top Up Diamond Free Fire Cepat & Aman</p>
+  <a href="#produk" class="main-btn">BELI DIAMOND</a>
+</section>
+
+<!-- PRODUK -->
+<section class="container" id="produk">
+  <div class="section-title">
+    <h2>LIST DIAMOND</h2>
+    <p>Pilih paket diamond favoritmu</p>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+
+  <div class="order-box">
+    <h3>Pesanan Kamu</h3>
+    <p id="selectedProduct">Belum memilih diamond</p>
+    <button onclick="openPayment()" class="main-btn">
+      LANJUT PEMBAYARAN
+    </button>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<div class="modal" id="paymentModal">
+  <div class="modal-content">
+    <button class="close" onclick="closePayment()">✕</button>
+    <h2>PAYMENT DHALL</h2>
+    <p>Scan QRIS untuk melakukan pembayaran</p>
+
+    <img src="Qris.jpg" class="qris-image" alt="QRIS DHALL STURE">
+
+    <div class="payment-info">
+      <p><b>DANA</b></p>
+      <h3>087869339272</h3>
+      <p>Atas Nama: <b>AFDHALL</b></p>
+    </div>
+
+    <p class="warning">
+      Pastikan nominal pembayaran sesuai pesanan.
+    </p>
+
+    <button onclick="showProof()" class="main-btn">
+      SUDAH TRANSFER
+    </button>
+  </div>
+</div>
+
+<!-- BUKTI TRANSFER -->
+<div class="modal" id="proofModal">
+  <div class="modal-content">
+    <button class="close" onclick="closeProof()">✕</button>
+    <h2>KIRIM BUKTI TRANSFER</h2>
+    <p>Upload screenshot bukti pembayaran kamu.</p>
+
+    <label class="upload-box">
+      <span>📷 PILIH SCREENSHOT</span>
+      <input type="file" id="proofFile" accept="image/*">
+    </label>
+
+    <img id="preview" class="preview">
+
+    <button onclick="sendWhatsApp()" class="whatsapp-btn">
+      <svg viewBox="0 0 32 32" width="22" height="22"
+        fill="currentColor" aria-hidden="true">
+        <path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.5 10.5 0 0 1-5.3-1.4l-.4-.2-3.9 1 1-3.8-.3-.4A10.5 10.5 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.8-1-2.4-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/>
+      </svg>
+      KIRIM KE WHATSAPP ADMIN
+    </button>
+
+    <small>Setelah WhatsApp terbuka, lampirkan screenshot bukti transfer secara manual.</small>
+  </div>
+</div>
+
+<footer>
+  <h2>DHALL STURE 👑</h2>
+  <p>MAKASIH YA UDAH MAU TOP UP DI DHALL STURE 😇</p>
+  <p>© 2026 DHALL STURE</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
